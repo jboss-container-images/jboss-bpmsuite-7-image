@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+SOURCES_DIR=/tmp/artifacts
+
+unzip $SOURCES_DIR/jboss-bpmsuite-7.0.0.CAP01-execution-server-ee7.zip -d $SOURCES_DIR
+
+cp -rf ${SOURCES_DIR}/jboss-brms-bpmsuite-7.0-execution-server-ee7/kie-execution-server.war $JBOSS_HOME/standalone/deployments/
+touch $JBOSS_HOME/standalone/deployments/kie-execution-server.war.dodeploy
+cp -rf ${SOURCES_DIR}/jboss-brms-bpmsuite-7.0-execution-server-ee7/SecurityPolicy/* $JBOSS_HOME/bin/
+
+chown -R jboss:root $JBOSS_HOME
+chmod 0755 $JBOSS_HOME
+chmod -R g+rwX $JBOSS_HOME
