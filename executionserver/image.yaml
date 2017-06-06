@@ -1,0 +1,26 @@
+name: "jboss-bpmsuite-7/bpmsuite70-executionserver"
+description: "Red Hat JBoss BPM Suite 7.0 Execution Server container image"
+version: "7.0.0"
+from: "jboss-eap-7/eap70:latest"
+user: 185
+envs:
+    - name: "JBOSS_PRODUCT"
+      value: "bpmsuite"
+    - name: "JBOSS_BPMSUITE_VERSION"
+      value: "7.0.0"
+    - name: "PRODUCT_VERSION"
+      value: "7.0.0"
+cmd:
+    - "/opt/eap/bin/standalone.sh"
+    - "-b"
+    - "0.0.0.0"
+    - "-c"
+    - "standalone-full.xml"
+scripts:
+    - package: executionserver
+      exec: install
+sources:
+    - artifact: jboss-bpmsuite-7.0.0.CAP01-execution-server-ee7.zip
+      md5: b3fa7382f2bafb33a5b51dd39624befa
+dogen:
+    version: 2.0.1
