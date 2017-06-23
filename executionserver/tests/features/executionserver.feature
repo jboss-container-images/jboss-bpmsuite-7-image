@@ -5,7 +5,7 @@ Feature: Standalone Execution Server tests
     Then check that page is served
          | property | value |
          | port     | 8080  |
-         | path     | /kie-execution-server/services/rest/server |
+         | path     | /services/rest/server |
          | expected_status_code | 401 |
 
    Scenario: Test REST API is available and valid
@@ -13,7 +13,7 @@ Feature: Standalone Execution Server tests
      Then check that page is served
          | property | value |
          | port     | 8080  |
-         | path     | /kie-execution-server/services/rest/server |
+         | path     | /services/rest/server |
          | username | kieserver |
          | password | kieserver1! |
          | expected_phrase | SUCCESS |
