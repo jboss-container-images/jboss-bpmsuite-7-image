@@ -15,12 +15,12 @@ cmd:
     - "-b"
     - "0.0.0.0"
     - "-c"
-    - "standalone-full.xml"
+    - "standalone.xml"
 scripts:
     - package: businesscentral
       exec: install
 sources:
-    - artifact: jboss-bpmsuite-7.0.0.CAP01-business-central-eap7.zip
-      md5: f3265b875d3c2a15bc50e5a6d40b03b3
+    - artifact: jboss-bpmsuite-7.0.0.CAP02-business-central-eap7.zip
+      md5: e33bbfebb84f4bf1a8b7ca43950f0dfc
 dogen:
-    version: 2.0.1
+    version: 2.2.0

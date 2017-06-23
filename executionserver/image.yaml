@@ -20,7 +20,7 @@ scripts:
     - package: executionserver
       exec: install
 sources:
-    - artifact: jboss-bpmsuite-7.0.0.CAP01-execution-server-ee7.zip
-      md5: b3fa7382f2bafb33a5b51dd39624befa
+    - artifact: jboss-bpmsuite-7.0.0.CAP02-execution-server-ee7.zip
+      md5: fa0ce3e796e566b504f90e4262f61b73
 dogen:
-    version: 2.0.1
+    version: 2.2.0
