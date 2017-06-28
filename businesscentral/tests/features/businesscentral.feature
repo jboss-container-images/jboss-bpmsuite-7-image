@@ -5,6 +5,6 @@ Feature: Standalone Business Central tests
     Then check that page is served
          | property | value |
          | port     | 8080  |
-         | path     | /business-central/kie-wb.jsp |
+         | path     | /kie-wb.jsp |
          | expected_status_code | 200 |
 

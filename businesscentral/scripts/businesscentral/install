@@ -8,6 +8,8 @@ unzip $SOURCES_DIR/jboss-bpmsuite-7.0.0.CAP01-business-central-eap7.zip -d $SOUR
 chmod 0755 ${SOURCES_DIR}/jboss-eap-7.0
 
 cp -rf ${SOURCES_DIR}/jboss-eap-7.0/* $JBOSS_HOME/
+mv "$JBOSS_HOME/standalone/deployments/business-central.war" "$JBOSS_HOME/standalone/deployments/ROOT.war"
+mv "$JBOSS_HOME/standalone/deployments/business-central.war.dodeploy" "$JBOSS_HOME/standalone/deployments/ROOT.war.dodeploy"
 
 chown -R jboss:root $JBOSS_HOME
 chmod 0755 $JBOSS_HOME
