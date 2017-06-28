@@ -15,7 +15,7 @@ cmd:
     - "-b"
     - "0.0.0.0"
     - "-c"
-    - "standalone-full.xml"
+    - "standalone.xml"
 scripts:
     - package: businesscentral
       exec: install
