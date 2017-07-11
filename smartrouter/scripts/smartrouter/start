@@ -1,0 +1,22 @@
+#!/bin/bash
+
+ROUTER_OPTS="-Dorg.kie.server.router.host=${KIE_ROUTER_HOST} \
+            -Dorg.kie.server.router.port=${KIE_ROUTER_PORT}"
+
+if [ "$KIE_ROUTER_CONTROLLER_URL" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.controller=${KIE_ROUTER_CONTROLLER_URL}"
+fi
+
+if [ "$KIE_ROUTER_CONTROLLER_USER" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.controller.user=${KIE_ROUTER_CONTROLLER_USER}"
+fi
+
+if [ "$KIE_ROUTER_CONTROLLER_PASSWORD" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.controller.pwd=${KIE_ROUTER_CONTROLLER_PASSWORD}"
+fi
+if [ "$KIE_ROUTER_CONTROLLER_URL_EXTERNAL" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.url.external=${KIE_ROUTER_CONTROLLER_URL_EXTERNAL}"
+fi
+
+${JAVA_HOME}/bin/java ${ROUTER_OPTS} \
+    -jar /opt/${JBOSS_PRODUCT}/${KIE_ROUTER_DISTRIBUTION_ARTIFACT}

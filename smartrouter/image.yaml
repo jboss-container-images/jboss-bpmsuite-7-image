@@ -1,0 +1,45 @@
+name: "jboss-bpmsuite-7/bpmsuite70-smartrouter"
+description: "Red Hat JBoss BPM Suite 7.0 Smart Router container image"
+version: "7.0.0"
+from: "jboss/openjdk18-rhel7:1.0"
+user: 185
+envs:
+    - name: "JBOSS_PRODUCT"
+      value: "bpmsuite-smartrouter"
+    - name: "JBOSS_BPMSUITE_SMARTROUTER_VERSION"
+      value: "7.0.0"
+    - name: "PRODUCT_VERSION"
+      value: "7.0.0"
+    - name: "KIE_ROUTER_DISTRIBUTION_ARTIFACT"
+      value: "kie-server-router-proxy-7.1.0.Beta3-redhat-1.jar"
+    - name: "KIE_ROUTER_HOST"
+      value: "0.0.0.0"
+      example: "localhost"
+      description: "Interface to which the smart router server will bind"
+    - name: "KIE_ROUTER_PORT"
+      value: "9000"
+      example: "9000"
+      description: "Port in which the smart router server listens"
+    - name: "KIE_ROUTER_CONTROLLER_URL"
+      example: "http://localhost:8080/business-central/rest/controller"
+      description: "URL to access the controller (standalone or in business-central)"
+    - name: "KIE_ROUTER_CONTROLLER_USER"
+      example: "bpmsAdmin"
+      description: "User name of the user to access the controller"
+    - name: "KIE_ROUTER_CONTROLLER_PASSWORD"
+      example: "Prueba01"
+      description: "Password of the user to access the controller"
+    - name: "KIE_ROUTER_CONTROLLER_URL_EXTERNAL"
+      example: "http://10.12.56.101.bcentral:8012"
+      description: "Public URL where the router can be found. Format http://<host>:<port>"
+cmd:
+    - "/opt/bpmsuite-smartrouter/start"
+scripts:
+    - package: smartrouter
+      exec: install
+      user: root
+sources:
+    - artifact: jboss-bpmsuite-7.0.0.Alpha01-engine.zip
+      md5: f5c7896f6823604eefb3f39ac7cc5359
+dogen:
+    version: 2.2.0
