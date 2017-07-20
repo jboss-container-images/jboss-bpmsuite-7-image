@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+SOURCES_DIR=/tmp/artifacts
+
+DISTRIBUTION_ZIP=jboss-brms-bpmsuite-${JBOSS_BPMSUITE_STANDALONECONTROLLER_VERSION}-execution-server-controller-ee7.zip
+DISTRIBUTION_PATH=jboss-brms-bpmsuite-7.0-execution-server-controller-ee7
+DISTRIBUTION_WAR_DIR=kie-server-controller.war
+
+unzip -q ${SOURCES_DIR}/${DISTRIBUTION_ZIP} -d $SOURCES_DIR
+
+cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/${DISTRIBUTION_WAR_DIR} $JBOSS_HOME/standalone/deployments/ROOT.war
+touch $JBOSS_HOME/standalone/deployments/ROOT.war.dodeploy
+cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/SecurityPolicy/* $JBOSS_HOME/bin/
+
+chown -R jboss:root $JBOSS_HOME
+chmod 0755 $JBOSS_HOME
+chmod -R g+rwX $JBOSS_HOME
