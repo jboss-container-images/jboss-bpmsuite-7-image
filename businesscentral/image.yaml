@@ -5,8 +5,8 @@ from: "jboss-eap-7/eap70:latest"
 user: 185
 envs:
     - name: "JBOSS_PRODUCT"
-      value: "bpmsuite"
-    - name: "JBOSS_BPMSUITE_VERSION"
+      value: "bpmsuite-businesscentral"
+    - name: "JBOSS_BPMSUITE_BUSINESSCENTRAL_VERSION"
       value: "7.0.0"
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
