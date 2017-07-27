@@ -23,4 +23,4 @@ sources:
     - artifact: jboss-brms-bpmsuite-7.0.0.ER-redhat-1-execution-server-controller-ee7.zip
       md5: 826b27adbfa260feb90f4d75651f6342
 dogen:
-    version: 2.2.0
+    version: 2.4.0

@@ -42,4 +42,4 @@ sources:
     - artifact: jboss-bpmsuite-7.0.0.Alpha01-engine.zip
       md5: f5c7896f6823604eefb3f39ac7cc5359
 dogen:
-    version: 2.2.0
+    version: 2.4.0
