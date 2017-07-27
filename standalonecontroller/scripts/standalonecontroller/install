@@ -4,7 +4,7 @@ set -e
 
 SOURCES_DIR=/tmp/artifacts
 
-DISTRIBUTION_ZIP=jboss-brms-bpmsuite-${JBOSS_BPMSUITE_STANDALONECONTROLLER_VERSION}-execution-server-controller-ee7.zip
+DISTRIBUTION_ZIP=jboss-brms-bpmsuite-7.0.0.ER-redhat-1-execution-server-controller-ee7.zip
 DISTRIBUTION_PATH=jboss-brms-bpmsuite-7.0-execution-server-controller-ee7
 DISTRIBUTION_WAR_DIR=kie-server-controller.war
 
