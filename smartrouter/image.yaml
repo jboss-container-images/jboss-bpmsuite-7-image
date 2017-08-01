@@ -11,7 +11,7 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "KIE_ROUTER_DISTRIBUTION_ARTIFACT"
-      value: "kie-server-router-proxy-7.1.0.Beta3-redhat-1.jar"
+      value: "kie-server-router-proxy-7.1.0.Final-redhat-1.jar"
     - name: "KIE_ROUTER_HOST"
       value: "0.0.0.0"
       example: "localhost"
@@ -39,7 +39,7 @@ scripts:
       exec: install
       user: root
 sources:
-    - artifact: jboss-bpmsuite-7.0.0.Alpha01-engine.zip
-      md5: f5c7896f6823604eefb3f39ac7cc5359
+    - artifact: jboss-bpmsuite-7.0.0-engine.zip
+      md5: 28b11076b0d317c8d2b44432efa7a893
 dogen:
     version: 2.4.0

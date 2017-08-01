@@ -20,7 +20,7 @@ scripts:
     - package: standalonecontroller
       exec: install
 sources:
-    - artifact: jboss-brms-bpmsuite-7.0.0.ER-redhat-1-execution-server-controller-ee7.zip
-      md5: 826b27adbfa260feb90f4d75651f6342
+    - artifact: jboss-bpmsuite-7.0.0-collection.zip
+      md5: 2871e5d0cacdf525a2d498bbee02ae79
 dogen:
     version: 2.4.0

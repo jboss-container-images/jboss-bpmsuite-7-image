@@ -4,10 +4,12 @@ set -e
 
 SOURCES_DIR=/tmp/artifacts
 
-DISTRIBUTION_ZIP=jboss-brms-bpmsuite-7.0.0.ER-redhat-1-execution-server-controller-ee7.zip
+DISTRIBUTION_CONTAINER_ZIP=jboss-bpmsuite-7.0.0-collection.zip
+DISTRIBUTION_ZIP=jboss-bpmsuite-7.0-execution-server-controller-ee7.zip
 DISTRIBUTION_PATH=jboss-brms-bpmsuite-7.0-execution-server-controller-ee7
 DISTRIBUTION_WAR_DIR=kie-server-controller.war
 
+unzip -q ${SOURCES_DIR}/${DISTRIBUTION_CONTAINER_ZIP} -d $SOURCES_DIR
 unzip -q ${SOURCES_DIR}/${DISTRIBUTION_ZIP} -d $SOURCES_DIR
 
 cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/${DISTRIBUTION_WAR_DIR} $JBOSS_HOME/standalone/deployments/ROOT.war
