@@ -20,7 +20,7 @@ scripts:
     - package: businesscentral
       exec: install
 sources:
-    - artifact: jboss-bpmsuite-7.0.0.CAP02-business-central-eap7.zip
-      md5: e33bbfebb84f4bf1a8b7ca43950f0dfc
+    - artifact: jboss-bpmsuite-7.0.0-business-central-eap7.zip
+      md5: f1bccca0b72b0d96db9d51a1e7035716
 dogen:
     version: 2.4.0

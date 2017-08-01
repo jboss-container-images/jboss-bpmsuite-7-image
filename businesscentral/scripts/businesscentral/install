@@ -4,7 +4,7 @@ set -e
 
 SOURCES_DIR=/tmp/artifacts
 
-unzip $SOURCES_DIR/jboss-bpmsuite-7.0.0.CAP02-business-central-eap7.zip -d $SOURCES_DIR
+unzip $SOURCES_DIR/jboss-bpmsuite-7.0.0-business-central-eap7.zip -d $SOURCES_DIR
 chmod 0755 ${SOURCES_DIR}/jboss-eap-7.0
 
 cp -rf ${SOURCES_DIR}/jboss-eap-7.0/* $JBOSS_HOME/
