@@ -2,7 +2,7 @@
 
 set -e
 
-DISTRIBUTION_ZIP=jboss-bpmsuite-7.0.0.Alpha01-engine.zip
+DISTRIBUTION_ZIP=jboss-bpmsuite-7.0.0-engine.zip
 DISTRIBUTION_ROUTER_PATH=jboss-bpmsuite-7.0-engine/${KIE_ROUTER_DISTRIBUTION_ARTIFACT}
 
 SOURCES_DIR=/tmp/artifacts
