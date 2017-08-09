@@ -18,5 +18,5 @@ if [ "$KIE_ROUTER_CONTROLLER_URL_EXTERNAL" != "" ]; then
     ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.url.external=${KIE_ROUTER_CONTROLLER_URL_EXTERNAL}"
 fi
 
-${JAVA_HOME}/bin/java ${ROUTER_OPTS} \
+exec ${JAVA_HOME}/bin/java ${ROUTER_OPTS} \
     -jar /opt/${JBOSS_PRODUCT}/${KIE_ROUTER_DISTRIBUTION_ARTIFACT}
