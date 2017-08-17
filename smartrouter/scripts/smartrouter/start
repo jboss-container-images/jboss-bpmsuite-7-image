@@ -3,6 +3,18 @@
 ROUTER_OPTS="-Dorg.kie.server.router.host=${KIE_ROUTER_HOST} \
             -Dorg.kie.server.router.port=${KIE_ROUTER_PORT}"
 
+if [ "$KIE_ROUTER_URL_EXTERNAL" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.url.external=${KIE_ROUTER_URL_EXTERNAL}"
+fi
+
+if [ "$KIE_ROUTER_ID" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.id=${KIE_ROUTER_ID}"
+fi
+
+if [ "$KIE_ROUTER_NAME" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.name=${KIE_ROUTER_NAME}"
+fi
+
 if [ "$KIE_ROUTER_CONTROLLER_URL" != "" ]; then
     ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.controller=${KIE_ROUTER_CONTROLLER_URL}"
 fi
@@ -14,8 +26,9 @@ fi
 if [ "$KIE_ROUTER_CONTROLLER_PASSWORD" != "" ]; then
     ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.controller.pwd=${KIE_ROUTER_CONTROLLER_PASSWORD}"
 fi
-if [ "$KIE_ROUTER_CONTROLLER_URL_EXTERNAL" != "" ]; then
-    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.url.external=${KIE_ROUTER_CONTROLLER_URL_EXTERNAL}"
+
+if [ "$KIE_ROUTER_CONTROLLER_TOKEN" != "" ]; then
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.controller.token=${KIE_ROUTER_CONTROLLER_TOKEN}"
 fi
 
 exec ${JAVA_HOME}/bin/java ${ROUTER_OPTS} \
