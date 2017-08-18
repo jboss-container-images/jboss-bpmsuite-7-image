@@ -12,7 +12,8 @@ if [ "$KIE_ROUTER_ID" != "" ]; then
 fi
 
 if [ "$KIE_ROUTER_NAME" != "" ]; then
-    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.name=${KIE_ROUTER_NAME}"
+    # Need to replace whitespaces with something different from space or escaped space (\ ) characters
+    ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.name=${KIE_ROUTER_NAME// /_}"
 fi
 
 if [ "$KIE_ROUTER_CONTROLLER_URL" != "" ]; then
