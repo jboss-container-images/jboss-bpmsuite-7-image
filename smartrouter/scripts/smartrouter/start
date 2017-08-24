@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROUTER_OPTS="-Dorg.kie.server.router.host=${KIE_ROUTER_HOST} \
-            -Dorg.kie.server.router.port=${KIE_ROUTER_PORT}"
+             -Dorg.kie.server.router.port=${KIE_ROUTER_PORT}"
 
 if [ "$KIE_ROUTER_URL_EXTERNAL" != "" ]; then
     ROUTER_OPTS="$ROUTER_OPTS -Dorg.kie.server.router.url.external=${KIE_ROUTER_URL_EXTERNAL}"
@@ -33,4 +33,4 @@ if [ "$KIE_ROUTER_CONTROLLER_TOKEN" != "" ]; then
 fi
 
 exec ${JAVA_HOME}/bin/java ${ROUTER_OPTS} \
-    -jar /opt/${JBOSS_PRODUCT}/${KIE_ROUTER_DISTRIBUTION_ARTIFACT}
+    -jar /opt/${JBOSS_PRODUCT}/${KIE_ROUTER_DISTRIBUTION_JAR}

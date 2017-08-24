@@ -4,18 +4,16 @@ set -e
 
 SOURCES_DIR=/tmp/artifacts
 
-DISTRIBUTION_CONTAINER_ZIP=jboss-bpmsuite-7.0.0-collection.zip
-DISTRIBUTION_ZIP=jboss-bpmsuite-7.0-execution-server-controller-ee7.zip
+DISTRIBUTION_ZIP=${KIE_SERVER_CONTROLLER_DISTRIBUTION_ZIP}
 DISTRIBUTION_PATH=jboss-brms-bpmsuite-7.0-execution-server-controller-ee7
 DISTRIBUTION_WAR_DIR=kie-server-controller.war
 
-unzip -q ${SOURCES_DIR}/${DISTRIBUTION_CONTAINER_ZIP} -d $SOURCES_DIR
-unzip -q ${SOURCES_DIR}/${DISTRIBUTION_ZIP} -d $SOURCES_DIR
+unzip -q ${SOURCES_DIR}/${DISTRIBUTION_ZIP} -d ${SOURCES_DIR}
 
-cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/${DISTRIBUTION_WAR_DIR} $JBOSS_HOME/standalone/deployments/ROOT.war
-touch $JBOSS_HOME/standalone/deployments/ROOT.war.dodeploy
-cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/SecurityPolicy/* $JBOSS_HOME/bin/
+cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/${DISTRIBUTION_WAR_DIR} ${JBOSS_HOME}/standalone/deployments/ROOT.war
+touch ${JBOSS_HOME}/standalone/deployments/ROOT.war.dodeploy
+cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/SecurityPolicy/* ${JBOSS_HOME}/bin/
 
-chown -R jboss:root $JBOSS_HOME
-chmod 0755 $JBOSS_HOME
-chmod -R g+rwX $JBOSS_HOME
+chown -R jboss:root ${JBOSS_HOME}
+chmod 0755 ${JBOSS_HOME}
+chmod -R g+rwX ${JBOSS_HOME}
