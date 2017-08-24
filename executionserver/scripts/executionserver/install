@@ -4,12 +4,16 @@ set -e
 
 SOURCES_DIR=/tmp/artifacts
 
-unzip $SOURCES_DIR/jboss-bpmsuite-7.0.0-execution-server-ee7.zip -d $SOURCES_DIR
+DISTRIBUTION_ZIP=${KIE_SERVER_DISTRIBUTION_ZIP}
+DISTRIBUTION_PATH=jboss-brms-bpmsuite-7.0-execution-server-ee7
+DISTRIBUTION_WAR_DIR=kie-execution-server.war
 
-cp -rf ${SOURCES_DIR}/jboss-brms-bpmsuite-7.0-execution-server-ee7/kie-execution-server.war $JBOSS_HOME/standalone/deployments/ROOT.war
-touch $JBOSS_HOME/standalone/deployments/ROOT.war.dodeploy
-cp -rf ${SOURCES_DIR}/jboss-brms-bpmsuite-7.0-execution-server-ee7/SecurityPolicy/* $JBOSS_HOME/bin/
+unzip -q ${SOURCES_DIR}/${DISTRIBUTION_ZIP} -d ${SOURCES_DIR}
 
-chown -R jboss:root $JBOSS_HOME
-chmod 0755 $JBOSS_HOME
-chmod -R g+rwX $JBOSS_HOME
+cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/${DISTRIBUTION_WAR_DIR} ${JBOSS_HOME}/standalone/deployments/ROOT.war
+touch ${JBOSS_HOME}/standalone/deployments/ROOT.war.dodeploy
+cp -rf ${SOURCES_DIR}/${DISTRIBUTION_PATH}/SecurityPolicy/* ${JBOSS_HOME}/bin/
+
+chown -R jboss:root ${JBOSS_HOME}
+chmod 0755 ${JBOSS_HOME}
+chmod -R g+rwX ${JBOSS_HOME}

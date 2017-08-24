@@ -10,6 +10,8 @@ envs:
       value: "7.0.0"
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
+    - name: "BUSINESS_CENTRAL_MONITORING_DISTRIBUTION_ZIP"
+      value: "jboss-bpmsuite-7.0.0-business-central-monitoring-eap7.zip"
 cmd:
     - "/opt/eap/bin/standalone.sh"
     - "-b"
@@ -23,4 +25,4 @@ sources:
     - artifact: jboss-bpmsuite-7.0.0-business-central-monitoring-eap7.zip
       md5: e9c81ca4722291d42b5bf4e040e3d4d8
 dogen:
-    version: 2.4.0
+    version: 2.4.1
