@@ -1,0 +1,8 @@
+# JBoss BPM Suite 7.0 Business Central Monitoring container image
+
+NOTE: Extends link:https://github.com/jboss-container-images/jboss-eap-7-image[JBoss EAP 7 image]
+
+# License
+
+See link:LICENSE[LICENSE] file.
+
