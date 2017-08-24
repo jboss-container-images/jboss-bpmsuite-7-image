@@ -1,0 +1,26 @@
+name: "jboss-bpmsuite-7/bpmsuite70-businesscentral-monitoring"
+description: "Red Hat JBoss BPM Suite 7.0 Business Central Monitoring container image"
+version: "7.0.0"
+from: "jboss-eap-7/eap70:latest"
+user: 185
+envs:
+    - name: "JBOSS_PRODUCT"
+      value: "bpmsuite-businesscentral-monitoring"
+    - name: "JBOSS_BPMSUITE_BUSINESSCENTRAL_MONITORING_VERSION"
+      value: "7.0.0"
+    - name: "PRODUCT_VERSION"
+      value: "7.0.0"
+cmd:
+    - "/opt/eap/bin/standalone.sh"
+    - "-b"
+    - "0.0.0.0"
+    - "-c"
+    - "standalone.xml"
+scripts:
+    - package: businesscentral-monitoring
+      exec: install
+sources:
+    - artifact: jboss-bpmsuite-7.0.0-business-central-monitoring-eap7.zip
+      md5: e9c81ca4722291d42b5bf4e040e3d4d8
+dogen:
+    version: 2.4.0
