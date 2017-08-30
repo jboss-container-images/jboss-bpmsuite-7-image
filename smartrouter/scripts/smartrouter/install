@@ -3,12 +3,11 @@
 set -e
 
 SOURCES_DIR=/tmp/artifacts
-ROUTER_DIR=/opt/${JBOSS_PRODUCT}
 SCRIPT_DIR=$(dirname $0)
+ROUTER_DIR=/opt/${JBOSS_PRODUCT}
 
 mkdir -p ${ROUTER_DIR}
 cp -f ${SOURCES_DIR}/${KIE_ROUTER_DISTRIBUTION_JAR} ${ROUTER_DIR}
-cp -f ${SCRIPT_DIR}/start ${ROUTER_DIR}
 
 chown -R jboss:root ${ROUTER_DIR}
 chmod -R ug+x ${ROUTER_DIR}
