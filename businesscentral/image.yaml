@@ -11,7 +11,7 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "BUSINESS_CENTRAL_DISTRIBUTION_ZIP"
-      value: "jboss-bpmsuite-7.0.0.redhat-SNAPSHOT-business-central-eap7.zip"
+      value: "jboss-bpmsuite-7.0.0.Beta01-business-central-eap7.zip"
 cmd:
     - "/opt/eap/bin/standalone.sh"
     - "-b"
@@ -22,7 +22,7 @@ scripts:
     - package: businesscentral
       exec: install
 sources:
-    - artifact: jboss-bpmsuite-7.0.0.redhat-SNAPSHOT-business-central-eap7.zip
-      md5: e9625027d08c2d0ae147216608dd1a9e
+    - artifact: jboss-bpmsuite-7.0.0.Beta01-business-central-eap7.zip
+      md5: ad49d315784c2127254c3539e45dd0ac
 dogen:
     version: 2.4.1

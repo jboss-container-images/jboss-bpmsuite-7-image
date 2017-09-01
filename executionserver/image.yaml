@@ -11,7 +11,7 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "KIE_SERVER_DISTRIBUTION_ZIP"
-      value: "jboss-brms-bpmsuite-7.0.0.redhat-SNAPSHOT-execution-server-ee7.zip"
+      value: "jboss-brms-bpmsuite-7.0.0.Beta01-execution-server-ee7.zip"
 cmd:
     - "/opt/eap/bin/standalone.sh"
     - "-b"
@@ -22,7 +22,7 @@ scripts:
     - package: executionserver
       exec: install
 sources:
-    - artifact: jboss-brms-bpmsuite-7.0.0.redhat-SNAPSHOT-execution-server-ee7.zip
-      md5: e4388bafb388c55e398b64ed3a984ad3
+    - artifact: jboss-brms-bpmsuite-7.0.0.Beta01-execution-server-ee7.zip
+      md5: 84d353b1fe5958cbc9bbfe275a91f538
 dogen:
     version: 2.4.1

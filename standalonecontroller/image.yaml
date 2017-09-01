@@ -11,7 +11,7 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "KIE_SERVER_CONTROLLER_DISTRIBUTION_ZIP"
-      value: "jboss-brms-bpmsuite-7.0.0.redhat-SNAPSHOT-execution-server-controller-ee7.zip"
+      value: "jboss-brms-bpmsuite-7.0.0.Beta01-execution-server-controller-ee7.zip"
 cmd:
     - "/opt/eap/bin/standalone.sh"
     - "-b"
@@ -22,7 +22,7 @@ scripts:
     - package: standalonecontroller
       exec: install
 sources:
-    - artifact: jboss-brms-bpmsuite-7.0.0.redhat-SNAPSHOT-execution-server-controller-ee7.zip
-      md5: bd5058861a0e220368f2917fb0cb4a18
+    - artifact: jboss-brms-bpmsuite-7.0.0.Beta01-execution-server-controller-ee7.zip
+      md5: 13dcca8ca237640790c4afec9222d20f
 dogen:
     version: 2.4.1
