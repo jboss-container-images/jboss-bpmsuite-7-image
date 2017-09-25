@@ -5,7 +5,7 @@ set -e
 SOURCES_DIR=/tmp/artifacts
 
 DISTRIBUTION_ZIP=${KIE_SERVER_DISTRIBUTION_ZIP}
-DISTRIBUTION_PATH=jboss-brms-bpmsuite-7.0-execution-server-ee7
+DISTRIBUTION_PATH=jboss-bpmsuite-7.0-execution-server-ee7
 DISTRIBUTION_WAR_DIR=kie-execution-server.war
 
 unzip -q ${SOURCES_DIR}/${DISTRIBUTION_ZIP} -d ${SOURCES_DIR}
