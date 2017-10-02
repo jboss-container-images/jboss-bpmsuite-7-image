@@ -1,8 +1,9 @@
+schema_version: 1
+
 name: "jboss-bpmsuite-7/bpmsuite70-smartrouter"
 description: "Red Hat JBoss BPM Suite 7.0 Smart Router container image"
 version: "7.0.0"
 from: "jboss/openjdk18-rhel7:1.0"
-user: 185
 envs:
     - name: "JBOSS_PRODUCT"
       value: "bpmsuite-smartrouter"
@@ -12,15 +13,15 @@ envs:
       value: "7.0.0"
     - name: "KIE_ROUTER_DISTRIBUTION_JAR"
       value: "jboss-bpmsuite-7.0.0.Beta02-smart-router.jar"
-cmd:
-    - "/usr/bin/java"
-    - "-jar"
-    - "/opt/bpmsuite-smartrouter/jboss-bpmsuite-7.0.0.Beta02-smart-router.jar"
-scripts:
-    - package: smartrouter
-      exec: install
-sources:
-    - artifact: jboss-bpmsuite-7.0.0.Beta02-smart-router.jar
+modules:
+      install:
+          - name: smartrouter
+artifacts:
+    - path: jboss-bpmsuite-7.0.0.Beta02-smart-router.jar
       md5: c1f2c6832ebfff628b8b0172435be0af
-dogen:
-    version: 2.4.1
+run:
+      user: 185
+      cmd:
+          - "/usr/bin/java"
+          - "-jar"
+          - "/opt/bpmsuite-smartrouter/jboss-bpmsuite-7.0.0.Beta02-smart-router.jar"

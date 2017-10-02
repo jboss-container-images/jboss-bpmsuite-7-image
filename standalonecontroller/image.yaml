@@ -1,8 +1,9 @@
+schema_version: 1
+
 name: "jboss-bpmsuite-7/bpmsuite70-standalonecontroller"
 description: "Red Hat JBoss BPM Suite 7.0 Standalone Controller container image"
 version: "7.0.0"
 from: "jboss-eap-7/eap70:latest"
-user: 185
 envs:
     - name: "JBOSS_PRODUCT"
       value: "bpmsuite-standalonecontroller"
@@ -12,17 +13,17 @@ envs:
       value: "7.0.0"
     - name: "KIE_SERVER_CONTROLLER_DISTRIBUTION_ZIP"
       value: "jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-controller-ee7.zip"
-cmd:
-    - "/opt/eap/bin/standalone.sh"
-    - "-b"
-    - "0.0.0.0"
-    - "-c"
-    - "standalone-full.xml"
-scripts:
-    - package: standalonecontroller
-      exec: install
-sources:
-    - artifact: jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-controller-ee7.zip
+modules:
+      install:
+          - name: standalonecontroller
+artifacts:
+    - path: jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-controller-ee7.zip
       md5: 4cc9ac36e251da6e46c6992f9985e3f7
-dogen:
-    version: 2.4.1
+run:
+      user: 185
+      cmd:
+          - "/opt/eap/bin/standalone.sh"
+          - "-b"
+          - "0.0.0.0"
+          - "-c"
+          - "standalone-full.xml"
