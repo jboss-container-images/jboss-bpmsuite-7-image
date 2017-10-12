@@ -12,13 +12,13 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "BUSINESS_CENTRAL_MONITORING_DISTRIBUTION_ZIP"
-      value: "jboss-bpmsuite-7.0.0.Beta02-business-central-monitoring-eap7.zip"
+      value: "jboss-bpmsuite-7.0.0.LA-business-central-monitoring-eap7.zip"
 modules:
       install:
           - name: businesscentral-monitoring
 artifacts:
-    - path: jboss-bpmsuite-7.0.0.Beta02-business-central-monitoring-eap7.zip
-      md5: 7907ea7485e11f543a8277c506b5f4a8
+    - path: jboss-bpmsuite-7.0.0.LA-business-central-monitoring-eap7.zip
+      md5: 8a2947a73543f4970ba85dd2636bb5c5
 run:
       user: 185
       cmd:

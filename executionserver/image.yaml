@@ -12,13 +12,13 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "KIE_SERVER_DISTRIBUTION_ZIP"
-      value: "jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-ee7.zip"
+      value: "jboss-bpmsuite-7.0.0.LA-execution-server-ee7.zip"
 modules:
       install:
           - name: executionserver
 artifacts:
-    - path: jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-ee7.zip
-      md5: 89b69d41e8374efd4e8c57aa8f625e43
+    - path: jboss-bpmsuite-7.0.0.LA-execution-server-ee7.zip
+      md5: 7e7437893b27240d130451618322acc9
 run:
       user: 185
       cmd:

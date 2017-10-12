@@ -12,13 +12,13 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "7.0.0"
     - name: "KIE_SERVER_CONTROLLER_DISTRIBUTION_ZIP"
-      value: "jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-controller-ee7.zip"
+      value: "jboss-bpmsuite-7.0.0.LA-execution-server-controller-ee7.zip"
 modules:
       install:
           - name: standalonecontroller
 artifacts:
-    - path: jboss-brms-bpmsuite-7.0.0.Beta02-execution-server-controller-ee7.zip
-      md5: 4cc9ac36e251da6e46c6992f9985e3f7
+    - path: jboss-bpmsuite-7.0.0.LA-execution-server-controller-ee7.zip
+      md5: ceff19266b39bc9748ce975f8171c2b5
 run:
       user: 185
       cmd:
