@@ -25,7 +25,7 @@ modules:
           - name: executionserver
 artifacts:
     - path: jboss-bpmsuite-7.0.0.LA-execution-server-ee7.zip
-      md5: 7e7437893b27240d130451618322acc9
+      md5:  c6a160c79976bb683d56e16e98d762f3
 run:
       user: 185
       cmd:

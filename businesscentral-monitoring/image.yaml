@@ -25,7 +25,7 @@ modules:
           - name: businesscentral-monitoring
 artifacts:
     - path: jboss-bpmsuite-7.0.0.LA-business-central-monitoring-eap7.zip
-      md5: 8a2947a73543f4970ba85dd2636bb5c5
+      md5:  79adc57f24f71c019ebb1900ef7d6976
 run:
       user: 185
       cmd:

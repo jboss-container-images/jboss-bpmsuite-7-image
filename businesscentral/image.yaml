@@ -25,7 +25,7 @@ modules:
           - name: businesscentral
 artifacts:
     - path: jboss-bpmsuite-7.0.0.LA-business-central-eap7.zip
-      md5: 68f9a804f4202c86b7bf98fefc772ded
+      md5:  1346128143f5ca60a2b13bcc2d2c4309
 run:
       user: 185
       cmd:
