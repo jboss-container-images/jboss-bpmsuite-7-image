@@ -25,7 +25,7 @@ modules:
           - name: standalonecontroller
 artifacts:
     - path: jboss-bpmsuite-7.0.0.LA-execution-server-controller-ee7.zip
-      md5: ceff19266b39bc9748ce975f8171c2b5
+      md5:  aa57ec571c7398d8c5e9b0e49b4e13f3
 run:
       user: 185
       cmd:

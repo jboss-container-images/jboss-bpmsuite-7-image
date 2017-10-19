@@ -25,7 +25,7 @@ modules:
           - name: smartrouter
 artifacts:
     - path: jboss-bpmsuite-7.0.0.LA-smart-router.jar
-      md5: 199152c80494394f40076a55f96d0657
+      md5:  bd895e398a92f51cfe09f3e7183ac5bd
 run:
       user: 185
       cmd:
