@@ -21,6 +21,8 @@ envs:
     - name: "KIE_SERVER_CONTROLLER_DISTRIBUTION_ZIP"
       value: "jboss-bpmsuite-7.0.0.LA-execution-server-controller-ee7.zip"
 modules:
+      repositories:
+          - path: modules
       install:
           - name: standalonecontroller
 artifacts:

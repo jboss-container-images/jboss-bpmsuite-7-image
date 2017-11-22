@@ -21,6 +21,8 @@ envs:
     - name: "BUSINESS_CENTRAL_DISTRIBUTION_ZIP"
       value: "jboss-bpmsuite-7.0.0.LA-business-central-eap7.zip"
 modules:
+      repositories:
+          - path: modules
       install:
           - name: businesscentral
 artifacts:
