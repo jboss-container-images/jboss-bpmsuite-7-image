@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-bpmsuite-7/bpmsuite70-businesscentral"
 description: "Red Hat JBoss BPM Suite 7.0 Business Central container image"
 version: "7.0.0"
-from: "jboss-eap-7/eap70:latest"
+from: "jboss-eap-7/eap71:latest"
 labels:
     - name: "org.jboss.product"
       value: "bpmsuite-businesscentral"
